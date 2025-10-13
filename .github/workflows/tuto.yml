@@ -14,8 +14,6 @@ jobs:
       - run: |
              trois_oeuvres_de moliere=(
              "Le Tartuffe ou l'Imposteur"
-             "L'avare"
-             "Le Bourgeois gentilhomme"
              )
      
       - run: npm install -g bats
