@@ -10,5 +10,6 @@ jobs:
         with:
           node-version: '20'
       - run: date
+      - run: ls .git
       - run: npm install -g bats
       - run: bats -v
