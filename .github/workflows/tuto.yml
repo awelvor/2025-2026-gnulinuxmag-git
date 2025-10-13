@@ -11,5 +11,8 @@ jobs:
           node-version: '20'
       - run: date
       - run: ls .git
+      - run: IFS=':'
+      - run: $files="abc:abcdef"
+      - run: ls ${files}
       - run: npm install -g bats
       - run: bats -v
