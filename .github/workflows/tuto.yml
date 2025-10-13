@@ -11,11 +11,12 @@ jobs:
           node-version: '20'
       - run: date
       - run: ls .git
-      - run: trois_oeuvres_de moliere=(
-      "Le Tartuffe ou l'Imposteur"
-      "L'avare"
-      "Le Bourgeois gentilhomme"
-      )
+      - run: |
+             trois_oeuvres_de moliere=(
+             "Le Tartuffe ou l'Imposteur"
+             "L'avare"
+             "Le Bourgeois gentilhomme"
+             )
      
       - run: npm install -g bats
       - run: bats -v
