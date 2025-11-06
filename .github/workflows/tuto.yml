@@ -1,16 +1,12 @@
-name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
-on: [push]
+name: gnulinuxmag
+run-name: exemple.yml
+on: push
 jobs:
-  check-bats-version:
+  etape1:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - run: date
-      - run: ls .git
-      
-      - run: npm install -g bats
-      - run: bats -v
+      - name: Checkout code
+        uses: actions/checkout@v5.0.0
+      - run: bash 2025-09-LM277-git-concepts.sh
+      - run: echo "end of file"
+    
