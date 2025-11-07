@@ -62,7 +62,7 @@ git config branch.main.description "A description for the branch"
 git config branch.main.description
 
 cat .git/config
-
+echo "3.4 Le tag"
 git tag wip-tag HEAD
 
 cat .git/refs/tags/wip-tag
@@ -74,7 +74,7 @@ git tag --message "Release of v0.1.0, the beginning of a great adventure" v0.1.0
 cat .git/refs/tags/v0.1.0
 
 zlib-flate -uncompress < .git/objects/03/302b9ac5c5b0e99685dd5eeb7abc5cb801add0 | tr '\0' '\n'
-
+echo "3.5 L repertoire de travail"
 rm -rf /tmp/linuxmag-repo-test-old
 git worktree add /tmp/linuxmag-repo-test-old ff173
 
@@ -85,9 +85,10 @@ ls -Ap /tmp/linuxmag-repo-test-old
 cat /tmp/linuxmag-repo-test-old/.git
 
 ls -Ap /tmp/linuxmag-repo-test/.git/worktrees/linuxmag-repo-test-old
+echo "3.6 Le depot"
 
 ls -Ap /tmp/linuxmag-repo-test/.git
-
+echo "3.7 Le remote"
 rm -rf /tmp/linuxmag-repo-test-clone
 git clone --quiet file:///tmp/linuxmag-repo-test /tmp/linuxmag-repo-test-clone
 
@@ -108,7 +109,7 @@ git -C /tmp/linuxmag-repo-test remote -v
 
 git -C /tmp/linuxmag-repo-test fetch --quiet my-clone
 ls /tmp/linuxmag-repo-test/.git/refs/remotes/my-clone
-
+echo "3.8 L'indes"
 git rm --quiet my-file2.txt
 git status
 
@@ -119,7 +120,7 @@ stat \
 od -tx1a .git/index
 
 git ls-files --stage --debug
-
+echo "3.9 HEAD"
 cat /tmp/linuxmag-repo-test/.git/HEAD
 
 git checkout ff173
@@ -129,7 +130,7 @@ git status
 cat /tmp/linuxmag-repo-test/.git/HEAD
 
 git checkout main
-
+echo "3.10 Le stash"
 cat .git/HEAD ; cat .git/refs/heads/main ; cat my-file.txt
 
 echo "changes to commit" > my-file.txt
@@ -179,7 +180,7 @@ cat .git/refs/stash
 git reflog stash
 
 git stash list --format=oneline
-
+echo "3.11 Le reflog"
 tree .git/logs
 
 cat .git/logs/refs/heads/main
