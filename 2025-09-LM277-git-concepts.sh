@@ -21,7 +21,7 @@ git add my-file.txt
 git commit --message="Initial version"
 
 git log
-
+echo "3.2 Le commit"
 zlib-flate -uncompress < .git/objects/09/a7b88683a6f2216a99228a9d6d18e46e61c1aa | od -tx1a
 
 zlib-flate -uncompress < .git/objects/09/a7b88683a6f2216a99228a9d6d18e46e61c1aa | tr '\0' '\n'
