@@ -27,9 +27,9 @@ zlib-flate -uncompress < .git/objects/09/a7b88683a6f2216a99228a9d6d18e46e61c1aa 
 zlib-flate -uncompress < .git/objects/09/a7b88683a6f2216a99228a9d6d18e46e61c1aa | tr '\0' '\n'
 
 zlib-flate -uncompress < .git/objects/32/e678b70ec5d0becd6a1e7faf4be869df9e4317 | od -tx1a
-
+echo "nom du fichier"
 git cat-file -p 32e678b70ec5d0becd6a1e7faf4be869df9e4317
-
+echo "contenu du fichier"
 zlib-flate -uncompress < .git/objects/02/5d08be7f4781ef51ae7a593cc47776d0a5da17 | tr '\0' '\n'
 
 git commit --amend --only --message="First commit"
