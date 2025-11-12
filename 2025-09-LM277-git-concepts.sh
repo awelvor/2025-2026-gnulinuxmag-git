@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-sudo apt install zlib-flate
+sudo apt install qpdf
 
 rm -rf /tmp/linuxmag-repo-test
 mkdir -p /tmp/linuxmag-repo-test
