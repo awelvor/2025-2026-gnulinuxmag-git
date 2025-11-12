@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+sudo apt install zlib1g-dev
+
 rm -rf /tmp/linuxmag-repo-test
 mkdir -p /tmp/linuxmag-repo-test
 cd /tmp/linuxmag-repo-test
