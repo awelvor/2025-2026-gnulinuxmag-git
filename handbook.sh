@@ -2,6 +2,7 @@
 
 echo "handbook"
 mkdir ocr1
+cd ocr1
 git init
 echo "README'> README
 echo "test.rb" > test.rb
