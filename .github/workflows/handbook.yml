@@ -1,5 +1,5 @@
 name: handbook
-run-name: exemple.yml
+run-name: handbook.yml
 on: push
 jobs:
   etape1:
