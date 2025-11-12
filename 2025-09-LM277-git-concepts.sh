@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-sudo apt install zlib1g-dev
+sudo apt install zlib1g-flat
 
 rm -rf /tmp/linuxmag-repo-test
 mkdir -p /tmp/linuxmag-repo-test
