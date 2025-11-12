@@ -1,0 +1,11 @@
+name: handbook
+run-name: exemple.yml
+on: push
+jobs:
+  etape1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5.0.0
+      - run: bash 2025-09-LM277-git-concepts.sh
+      - run: echo "end of file"
