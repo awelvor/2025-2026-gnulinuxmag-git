@@ -24,8 +24,9 @@ git commit --message="Initial version"
 
 git log
 echo "3.2 Le commit"
+echo "od -txla"
 zlib-flate -uncompress < .git/objects/09/a7b88683a6f2216a99228a9d6d18e46e61c1aa | od -tx1a
-
+echo "tr 0 n"
 zlib-flate -uncompress < .git/objects/09/a7b88683a6f2216a99228a9d6d18e46e61c1aa | tr '\0' '\n'
 
 zlib-flate -uncompress < .git/objects/32/e678b70ec5d0becd6a1e7faf4be869df9e4317 | od -tx1a
